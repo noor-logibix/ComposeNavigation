@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun GameScreen(
-    onNext: () -> Unit = {},
+    onNext: (Int) -> Unit = {},
     onBack: () -> Unit = {},
     modifier: Modifier = Modifier
 ) {
@@ -40,7 +40,7 @@ fun GameScreen(
                 Text(text = "Back")
             }
             OutlinedButton(onClick = {
-                onNext()
+                onNext(512)
             }) {
                 Text(text = "Next")
             }

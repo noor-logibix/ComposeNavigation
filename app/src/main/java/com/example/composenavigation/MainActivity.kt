@@ -55,10 +55,9 @@ fun App() {
         }
 
         composable(Route.GAME.name) {
-            val score = 99
             GameScreen(
                 onNext = {
-                    navHostController.navigate("${Route.SCORE.name}/$score")
+                    navHostController.navigate("${Route.SCORE.name}/$it")
                 },
                 onBack = {
                     navHostController.popBackStack()
